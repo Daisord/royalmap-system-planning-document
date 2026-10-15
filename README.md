@@ -11,7 +11,66 @@
 - 追蹤開發工作、驗收條件、驗證證據及審查結果。
 - 在交付後同步更新系統現況，保留決策、變更與問題處理歷程。
 
-## 快速開始
+## 安裝至 Codex
+
+前置需求：已安裝 Git 與 Codex。將本儲存庫 Clone 到個人技能目錄後，即可在不同專案使用此技能。以下指令擇一執行。
+
+### Windows PowerShell
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$HOME/.agents/skills" | Out-Null
+
+git clone https://github.com/Daisord/royalmap-system-planning-document.git "$HOME/.agents/skills/royalmap-system-planning-document"
+```
+
+### macOS／Linux
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+
+git clone https://github.com/Daisord/royalmap-system-planning-document.git \
+  "$HOME/.agents/skills/royalmap-system-planning-document"
+```
+
+第一次下載使用 `git clone`；若目標目錄已存在，請先確認是否為同一份儲存庫，再依下方方式更新。
+
+### 更新技能
+
+Windows PowerShell、macOS 與 Linux 均可使用：
+
+```sh
+git -C "$HOME/.agents/skills/royalmap-system-planning-document" pull --ff-only
+```
+
+若本機修改與更新衝突，或分支已分歧，更新會停止；請先處理本機變更，再重新執行。
+
+### 已下載至其他位置
+
+可將完整專案資料夾複製到個人技能目錄，保留 `SKILL.md`、`references/` 與 `scripts/` 的相對位置：
+
+```text
+~/.agents/skills/royalmap-system-planning-document/
+├─ SKILL.md
+├─ references/
+└─ scripts/
+```
+
+以複製方式安裝且未保留 Git 資訊時，後續需自行同步更新檔案。
+
+### 確認與使用
+
+在 Codex CLI／IDE 使用 `/skills` 查看技能，或在提示中輸入：
+
+```text
+$royalmap-system-planning-document
+
+請根據目前專案內容建立系統現況與規劃文件，
+未知資訊標示為待確認，並同步建立文件索引。
+```
+
+Codex 會自動偵測技能變更；若技能未出現，請重新啟動 Codex。技能目錄與使用方式可參閱 [OpenAI 官方技能文件](https://learn.chatgpt.com/docs/build-skills)。
+
+## 手動使用範本
 
 1. 取得本專案：
 
