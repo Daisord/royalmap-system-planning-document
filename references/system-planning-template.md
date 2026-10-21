@@ -2,6 +2,7 @@
 
 > 文件版本：`0.1.0`
 > 文件狀態：規劃中
+> 文件識別碼：`[DOC-唯一編號；啟用視覺化互通時填寫，否則移除此行]`
 > 最後更新日期：`YYYY-MM-DD`
 > 文件位置：`_Documents/[專案名稱]/02-Planning/[主題]-規劃設計.md`
 
@@ -324,6 +325,8 @@ flowchart LR
 ### 開發階段與 Exit Criteria
 
 > Planning 階段定義 Phase 的目標、邊界與離開條件即可；詳細 Work Unit 可在進入開發時依 Repository 現況建立與調整，避免過早將實作步驟寫死。
+
+> 啟用互通時，Phase ID 分配後保持穩定；開發工作單以本文件識別碼與 Phase ID 連回同一階段。
 
 | Phase | Objective | Boundary／主要範圍 | Exit Criteria |
 |---|---|---|---|
